@@ -1,5 +1,8 @@
-# returns a dictionary with each word in the text and its length
 def count_words(text):
+    """
+    :param str text: Text contain words and sentences.
+    :return: Dictionary with each word in the text and its length.
+    """
     words = [''.join(char for char in word if char.isalpha()) for word in text.lower().split()]
     words_and_length = {word: len(word) for word in words}
     return words_and_length
