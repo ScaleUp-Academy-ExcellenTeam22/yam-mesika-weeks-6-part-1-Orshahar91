@@ -1,18 +1,26 @@
-# Customized filter to act as regular built in filter
 def my_filter(function, iterable):
+    """
+    :param function: The function to run on the iterable.
+    :param iterable: Iterable to be filtered by the function.
+    :return: List of the filtered values.
+    """
     filtered_list = []
     for value in iterable:
-        if function is not None:
+        if function:
             if function(value):
                 filtered_list.append(value)
-        else:
-            if value:
-                filtered_list.append(value)
+        elif value:
+            filtered_list.append(value)
     return filtered_list
 
 
 # driver code to test the above function
 def is_mature(age):
+    """
+
+    :param str age: The age to check.
+    :return: True if adult or false if not.
+    """
     return age >= 18
 
 
