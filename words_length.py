@@ -1,3 +1,6 @@
-# return a list of lengths for the sentence provided
 def words_length(sentence):
+    """
+    :param str sentence: Sentence string.
+    :return: list of lengths for the sentence provided
+    """
     return list(len(word) for word in sentence.split())
